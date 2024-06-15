@@ -3,7 +3,7 @@ body {
     margin: 0;
     padding: 0;
     text-align: center;
-    background: url('background.jpg') no-repeat center center fixed;
+    background: url('background-desktop.jpg') no-repeat center center fixed;
     background-size: cover;
 }
 
@@ -14,11 +14,11 @@ header {
 }
 
 .logo {
-    width: 50px;
+    width: 100px;
     height: auto;
     position: absolute;
-    top: 5px;
-    left: 5px;
+    top: 10px;
+    left: 10px;
 }
 
 h1 {
@@ -50,7 +50,8 @@ section {
     outline: none;
     font-size: 15px;
     transition: 0.4s;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid
+#ddd;
 }
 
 .active, .accordion:hover {
@@ -63,6 +64,16 @@ section {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.2s ease-out;
+    visibility: hidden;
+    opacity: 0;
+    transition: max-height 0.2s ease-out, visibility 0s 0.2s, opacity 0.2s linear;
+}
+
+.accordion.active + .panel {
+    visibility: visible;
+    opacity: 1;
+    max-height: 200px; /* Adjust based on content height */
+    transition: max-height 0.2s ease-out, visibility 0s, opacity 0.2s linear;
 }
 
 footer {
@@ -73,6 +84,8 @@ footer {
 
 @media (max-width: 768px) {
     body {
+        background: url('background-mobile.jpg') no-repeat center center fixed;
+        background-size: cover;
         text-align: left;
         padding: 10px;
     }
