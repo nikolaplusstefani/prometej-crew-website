@@ -16,16 +16,78 @@
         <section>
             <h2>Our Services</h2>
             <ul>
-                <li>3D Printing and Prototype Design</li>
-                <li>Electroerosion Processing (EDM)</li>
-                <li>CNC Milling</li>
-                <li>Web Design and Logo Creation</li>
-                <li>Content Writing and Newsletters</li>
-                <li>Professional Product Photography</li>
-                <li>Advertising Printing</li>
-                <li>Branding</li>
-                <li>Consulting</li>
-                <li>Networking</li>
+                <li>
+                    <button class="accordion">3D Štampa i Dizajn Prototipova</button>
+                    <div class="panel">
+                        <p>Bez obzira na to koliko je vaša ideja inovativna, naša vrhunska 3D tehnologija štampanja će je oživeti s preciznošću i brzinom. Od prvog skica do završnog prototipa, tu smo da vas podržimo u svakom koraku.</p>
+                    </div>
+                </li>
+                <li>
+                    <button class="accordion">Elektroerozivna Obrada (EDM)</button>
+                    <div class="panel">
+                        <p>Za one najsloženije projekte, naše EDM rešenje osigurava savršene detalje i tačnost. Bez obzira na složenost dizajna, naš tim koristi najmoderniju opremu kako bi obezbedio besprekornu završnu obradu.</p>
+                    </div>
+                </li>
+                <li>
+                    <button class="accordion">CNC Glodanje</button>
+                    <div class="panel">
+                        <p>Naše CNC glodanje pruža maksimalnu preciznost i kvalitet, čineći svaki projekat besprekornim. Radimo sa različitim materijalima i nudimo prilagođena rešenja za sve vaše potrebe u proizvodnji.</p>
+                    </div>
+                </li>
+                <li>
+                    <button class="accordion">Web Dizajn i Kreiranje Logotipa</button>
+                    <div class="panel">
+                        <p>Izgradite svoj digitalni identitet sa stilom uz naš jedinstveni web dizajn i logotipe koji osvajaju. Naš tim dizajnera kreira atraktivne i funkcionalne web stranice koje odražavaju suštinu vašeg brenda.</p>
+                    </div>
+                </li>
+                <li>
+                    <button class="accordion">Pisanje Tekstova i Newsletter-a</button>
+                    <div class="panel">
+                        <p>Privucite pažnju i zadržite interesovanje svoje publike sa kreativnim tekstovima i newsletter-ima koji inspirišu. Naši pisci stvaraju sadržaj koji angažuje i motiviše vaše klijente.</p>
+                    </div>
+                </li>
+                <li>
+                    <button class="accordion">Profesionalna Produkt Fotografija</button>
+                    <div class="panel">
+                        <p>Učinite da vaši proizvodi blistaju uz našu profesionalnu fotografiju koja će ih prikazati u najboljem svetlu. Specijalizovani smo za fotografije visoke rezolucije koje poboljšavaju vizuelni identitet vašeg brenda.</p>
+                    </div>
+                </li>
+                <li>
+                    <button class="accordion">Reklamna Štampa</button>
+                    <div class="panel">
+                        <p>Promovišite svoj brend na upaljačima, hemijskim olovkama, flajerima, majicama, zastavama i još mnogo toga. Naša usluga reklamne štampe osigurava da vaša poruka bude svuda primećena.</p>
+                    </div>
+                </li>
+                <li>
+                    <button class="accordion">Brendiranje</button>
+                    <div class="panel">
+                        <p>Izgradite snažan identitet svog brenda uz naše usluge brendiranja. Naši stručnjaci rade na tome da vaša kompanija bude prepoznatljiva i jedinstvena na tržištu, koristeći inovativne strategije i kreativne pristupe.</p>
+                    </div>
+                </li>
+                <li>
+                    <button class="accordion">Savetovanje i Konsalting</button>
+                    <div class="panel">
+                        <p>Unapredite svoje poslovanje uz naše stručne usluge savetovanja i konsaltinga. Pomažemo vam da donesete prave odluke i ostvarite svoje poslovne ciljeve kroz detaljne analize i strateške savete.</p>
+                    </div>
+                </li>
+                <li>
+                    <button class="accordion">Networking</button>
+                    <div class="panel">
+                        <p>Povežite se sa pravim ljudima uz naše networking usluge. Širimo vašu mrežu kontakata i otvaramo vrata novim poslovnim prilikama, organizujući događaje i povezivanja sa ključnim industrijskim liderima.</p>
+                    </div>
+                </li>
+                <li>
+                    <button class="accordion">Uslužno Ceđenje Ulja</button>
+                    <div class="panel">
+                        <p>Nudimo uslugu ceđenja ulja sa opcijom donošenja vaše sirovine ili korišćenjem naše sirovine (lan, konoplja, kim, itd.). Bez obzira na to da li imate svoje seme ili želite da koristite našu visokokvalitetnu sirovinu, garantujemo vam hladno ceđeno ulje najvišeg kvaliteta. Naša moderna presa omogućava očuvanje svih nutritivnih vrednosti i prirodnog ukusa ulja.</p>
+                    </div>
+                </li>
+                <li>
+                    <button class="accordion">Izrada Filtera za Vodu</button>
+                    <div class="panel">
+                        <p>Nudimo rešenja za prečišćavanje vode kroz kombinaciju magneta, aktivnog uglja i mrežica. Naši filteri su prilagodljivi za industrijsku proizvodnju, celu kuću ili kao kuhinjski i tuš uređaji. Bez obzira na vašu potrebu, obezbeđujemo čistu i hemijski bezbednu vodu za sve namene.</p>
+                    </div>
+                </li>
             </ul>
         </section>
         <section>
@@ -37,6 +99,21 @@
     <footer>
         <p>Contact us today and let's move towards success together!</p>
     </footer>
+
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+        for (var i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.maxHeight) {
+                    panel.style.maxHeight = null;
+                } else {
+                    panel.style.maxHeight = panel.scrollHeight + "px";
+                }
+            });
+        }
+    </script>
 </body>
 </html>
 
